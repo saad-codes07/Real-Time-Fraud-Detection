@@ -1,5 +1,5 @@
 # Fraud Radar: Real-Time Credit Card Fraud Detection
-
+![tests](https://github.com/saad-codes07/Real-Time-Fraud-Detection/actions/workflows/tests.yml/badge.svg)
 An end-to-end machine learning pipeline: an XGBoost model trained on the Kaggle credit card
 fraud dataset, tracked with MLflow, served through FastAPI, visualized in a Streamlit
 dashboard, and packaged with Docker Compose so the whole system starts with a few commands.
@@ -109,6 +109,16 @@ malformed input is rejected with a clear error.
 - **How it works:** a short tour of the pipeline.
 
 ![Batch analysis](docs/images/batch-analysis.png)
+
+## Tests
+
+The API has automated tests (validation, threshold logic and error handling) that run on every
+push through GitHub Actions. They train a tiny throwaway model, so no dataset is needed.
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
 
 ## Limitations
 
