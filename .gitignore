@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data and trained models are large and reproducible, so we don't commit them
+data/*.csv
+models/*
+!models/.gitkeep
+
+# MLflow local tracking files
+mlflow.db
+mlruns/
+mlartifacts/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+.env
